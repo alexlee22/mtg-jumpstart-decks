@@ -60,12 +60,13 @@ for result in results:
     if deck['name'] in duplicates.keys():
       newstr = deck['name'] + str(duplicates[deck['name']] + 1)
       return_decks[newstr] = deck
-      return_decks[newstr]['name'] = newstr
       duplicates[deck['name']] = duplicates[deck['name']] + 1
+      return_decks[newstr]['name'] = return_decks[newstr]['name'] + str(duplicates[deck['name']])
     else:
+      duplicates[deck['name']] = 1
       return_decks[deck['name'] + "1"] = deck
       return_decks[deck['name'] + "1"]['name'] = deck['name'] + "1"
-      duplicates[deck['name']] = 1
+      
   else:
     return_decks[deck['name']] = deck
   
@@ -82,5 +83,5 @@ for key, value in return_decks.items():
 
 with open(output_path, 'w') as outfile:
   json.dump(return_decks, outfile)
-
+print(duplicates)
 print("Exported decks to {}".format(output_path))

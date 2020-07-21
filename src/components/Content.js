@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStateStore } from "../store/store.js";
 import { makeStyles } from '@material-ui/core/styles';
-
+import DeckContainer from './Deck/DeckContainer.js';
 const useStyles = makeStyles(theme => ({
   title: {
     marginBottom: '15px',
@@ -11,17 +11,23 @@ const useStyles = makeStyles(theme => ({
 
 export default function Content() {
   const classes = useStyles();
-  const [{ popup }, dispatch] = useStateStore();
-
+  const [{ rawDecks }, dispatch] = useStateStore();
+  /*
   function handlePopup(value){
     dispatch({
       type: "setPopup",
       payload: value
     });
   }
-  
+  */
+
+  console.log(rawDecks)
   return (
-    <div></div>
+    <div>
+      { Object.keys(rawDecks).map(deck =>
+        <DeckContainer key={deck} data={rawDecks[deck]} />
+      )}
+    </div>
   );
 
 }

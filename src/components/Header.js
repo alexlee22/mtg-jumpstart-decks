@@ -41,7 +41,7 @@ export default function Header() {
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { handleToggleMenu() }}>
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h5" className={classes.title}>
           Jumpstart
         </Typography>
       </Toolbar>
