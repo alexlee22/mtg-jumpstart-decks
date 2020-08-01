@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 //import { useStateStore } from "../store/store.js";
+import DeckContents from './DeckContents.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
@@ -16,17 +15,6 @@ const mana_colors = {
   'g': '#4caf50',
   'm': '#e91e63'
 }
-
-const card_classes = [
-  "creature", 
-  "sorcery", 
-  "instance", 
-  "enchantment",
-  "artifact",
-  "planeswalker",
-  "land",
-  "other",
-]
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -46,9 +34,7 @@ export default function DeckContainer(props) {
   const classes = useStyles();
   const { data } = props
   const [isOpen, setIsOpen] = useState(false);
-  //const [{  }, dispatch] = useStateStore();
-  //data.deck
-  console.log(data.name, isOpen)
+
   return (
     <Card className={classes.card}>
       <CardContent>
@@ -62,19 +48,7 @@ export default function DeckContainer(props) {
           />
         </div>
         <div style={isOpen ? {} : {display: 'none'}}>
-          {
-            card_classes.map(key => {
-              if (data.deck.hasOwnProperty(key)){
-                return(
-                  <>
-                    <Typography variant="button" display="block">{key}</Typography>
-                    
-                  </>
-                )
-              }
-            })
-          }
-          
+          <DeckContents deck={data.deck} />
         </div>
       </CardContent>
     </Card>

@@ -1,17 +1,19 @@
 import React from 'react';
 import { useStateStore } from "../store/store.js";
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import DeckContainer from './Deck/DeckContainer.js';
+/*
 const useStyles = makeStyles(theme => ({
   title: {
     marginBottom: '15px',
     textAlign: 'center'
   },
 }));
-
+*/
 export default function Content() {
-  const classes = useStyles();
-  const [{ rawDecks }, dispatch] = useStateStore();
+  //const classes = useStyles();
+  //const [{ rawDecks }, dispatch] = useStateStore();
+  const [{ rawDecks }, ] = useStateStore();
   /*
   function handlePopup(value){
     dispatch({
@@ -21,12 +23,14 @@ export default function Content() {
   }
   */
 
-  console.log(rawDecks)
   return (
     <div>
-      { Object.keys(rawDecks).map(deck =>
-        <DeckContainer key={deck} data={rawDecks[deck]} />
-      )}
+      <div className="MuiToolbar-regular"></div>
+      <div>
+        { Object.keys(rawDecks).map(deck =>
+          <DeckContainer key={deck} data={rawDecks[deck]} />
+        )}
+      </div>
     </div>
   );
 
