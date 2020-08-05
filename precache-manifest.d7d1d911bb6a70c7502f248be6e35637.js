@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d88ec24cb158f17472a4e34a123ef690",
+    "revision": "5931398f68f22c568c42437e4e073f36",
     "url": "/mtg-jumpstart-decks/index.html"
   },
   {
-    "revision": "b42e73e44057a08875e1",
+    "revision": "112a12544be784a0971e",
     "url": "/mtg-jumpstart-decks/static/css/main.69eda509.chunk.css"
   },
   {
-    "revision": "69131554c1192fa6e87b",
-    "url": "/mtg-jumpstart-decks/static/js/2.497d7a1b.chunk.js"
+    "revision": "e6b3e18c020187ba45a1",
+    "url": "/mtg-jumpstart-decks/static/js/2.2e54c1fe.chunk.js"
   },
   {
     "revision": "89ea5e0ed13930f7b9c9c2f392e27cfe",
-    "url": "/mtg-jumpstart-decks/static/js/2.497d7a1b.chunk.js.LICENSE.txt"
+    "url": "/mtg-jumpstart-decks/static/js/2.2e54c1fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b42e73e44057a08875e1",
-    "url": "/mtg-jumpstart-decks/static/js/main.ddc2c32f.chunk.js"
+    "revision": "112a12544be784a0971e",
+    "url": "/mtg-jumpstart-decks/static/js/main.fbfeb699.chunk.js"
   },
   {
     "revision": "1670676b8b1852b16927",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mtg-jumpstart-decks/precache-manifest.739c6501f03d8883386d7e3a58386274.js"
+  "/mtg-jumpstart-decks/precache-manifest.d7d1d911bb6a70c7502f248be6e35637.js"
 );
 
 self.addEventListener('message', (event) => {
