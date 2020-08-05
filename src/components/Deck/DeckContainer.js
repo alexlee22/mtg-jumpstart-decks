@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import { useStateStore } from "../store/store.js";
+import { useStateStore } from "../../store/store.js";
 import DeckContents from './DeckContents.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -33,10 +33,11 @@ const useStyles = makeStyles(theme => ({
 export default function DeckContainer(props) {
   const classes = useStyles();
   const { data } = props
+  const [{ searchResults }, ] = useStateStore();
   const [isOpen, setIsOpen] = useState(false);
-
+  
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} style={searchResults.indexOf(props.id) > -1 ? {} : {display: 'none'}}>
       <CardContent>
         <div style={{display: 'flex', justifyContent: 'space-between'}} onClick={() => setIsOpen(!isOpen)}>
           <Typography variant="h6" component="h6" className={classes.heading}>

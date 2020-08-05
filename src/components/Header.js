@@ -1,12 +1,11 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import Search from './Search.js';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import InputBase from '@material-ui/core/InputBase';
 //import { useStateStore } from "../store/store.js";
 
 const useStyles = makeStyles(theme => ({
@@ -55,7 +54,7 @@ export default function Header() {
   }
 
   return (
-    <AppBar position="absolute" >
+    <AppBar position="fixed" >
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { handleToggleMenu() }}>
           <MenuIcon />
@@ -64,14 +63,7 @@ export default function Header() {
           <div className={classes.iconWrapper}>
             <SearchIcon />
           </div>
-          <InputBase
-            placeholder="Deck or Card..."
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            inputProps={{ 'aria-label': 'search' }}
-          />
+          <Search />
         </div>
       </Toolbar>
       

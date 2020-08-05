@@ -28,7 +28,11 @@ export default function Content() {
       <div className="MuiToolbar-regular"></div>
       <div>
         { Object.keys(rawDecks).map(deck =>
-          <DeckContainer key={deck} data={rawDecks[deck]} />
+          <DeckContainer 
+            key={deck} 
+            id={deck} 
+            data={rawDecks[deck]}
+          />
         )}
       </div>
     </div>
