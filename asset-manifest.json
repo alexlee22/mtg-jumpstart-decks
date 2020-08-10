@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/mtg-jumpstart-decks/static/css/main.69eda509.chunk.css",
-    "main.js": "/mtg-jumpstart-decks/static/js/main.8e0f5dcc.chunk.js",
-    "main.js.map": "/mtg-jumpstart-decks/static/js/main.8e0f5dcc.chunk.js.map",
+    "main.js": "/mtg-jumpstart-decks/static/js/main.9a506888.chunk.js",
+    "main.js.map": "/mtg-jumpstart-decks/static/js/main.9a506888.chunk.js.map",
     "runtime-main.js": "/mtg-jumpstart-decks/static/js/runtime-main.b2adc788.js",
     "runtime-main.js.map": "/mtg-jumpstart-decks/static/js/runtime-main.b2adc788.js.map",
-    "static/js/2.022c4b0e.chunk.js": "/mtg-jumpstart-decks/static/js/2.022c4b0e.chunk.js",
-    "static/js/2.022c4b0e.chunk.js.map": "/mtg-jumpstart-decks/static/js/2.022c4b0e.chunk.js.map",
+    "static/js/2.339037e9.chunk.js": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js",
+    "static/js/2.339037e9.chunk.js.map": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js.map",
     "index.html": "/mtg-jumpstart-decks/index.html",
-    "precache-manifest.bc5c8272384ee81dc03c9e568045cd5d.js": "/mtg-jumpstart-decks/precache-manifest.bc5c8272384ee81dc03c9e568045cd5d.js",
+    "precache-manifest.6f3cbb8ac50c6658ddf1b8dfc110ef26.js": "/mtg-jumpstart-decks/precache-manifest.6f3cbb8ac50c6658ddf1b8dfc110ef26.js",
     "service-worker.js": "/mtg-jumpstart-decks/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/mtg-jumpstart-decks/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.022c4b0e.chunk.js.LICENSE.txt": "/mtg-jumpstart-decks/static/js/2.022c4b0e.chunk.js.LICENSE.txt"
+    "static/js/2.339037e9.chunk.js.LICENSE.txt": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b2adc788.js",
-    "static/js/2.022c4b0e.chunk.js",
+    "static/js/2.339037e9.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.8e0f5dcc.chunk.js"
+    "static/js/main.9a506888.chunk.js"
   ]
 }
