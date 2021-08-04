@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 export default function Content() {
   //const classes = useStyles();
   //const [{ rawDecks }, dispatch] = useStateStore();
-  const [{ rawDecks }, ] = useStateStore();
+  const [{ rawDecks, userDeckFilter, userLibrary }, ] = useStateStore();
   /*
   function handlePopup(value){
     dispatch({
@@ -22,7 +22,7 @@ export default function Content() {
     });
   }
   */
-
+  
   return (
     <div>
       <div className="MuiToolbar-regular"></div>
@@ -32,6 +32,7 @@ export default function Content() {
             key={deck} 
             id={deck} 
             data={rawDecks[deck]}
+            visible={userDeckFilter ? userLibrary.indexOf(deck) > -1 : true}
           />
         )}
       </div>

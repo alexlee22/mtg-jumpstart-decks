@@ -1,12 +1,13 @@
 import React from 'react';
 import Search from './Search.js';
+import { useStateStore } from "../store/store.js";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-//import { useStateStore } from "../store/store.js";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {
   const classes = useStyles();
-  //const [, dispatch] = useStateStore();
+  const [, dispatch] = useStateStore();
 
   function handleToggleMenu(){
     /*
@@ -50,14 +51,18 @@ export default function Header() {
       payload: ''
     });
     */
-    
+  }
+  function handleUserDeck(){
+    dispatch({
+      type: "setUserDeckFilter",
+    });
   }
 
   return (
     <AppBar position="fixed" >
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { handleToggleMenu() }}>
-          <MenuIcon />
+          <MenuIcon onClick={() => handleUserDeck()} />
         </IconButton>
         <div className={classes.search}>
           <div className={classes.iconWrapper}>

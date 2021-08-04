@@ -6,7 +6,8 @@ from xml.etree import ElementTree
 from lxml import etree
 from bs4 import BeautifulSoup
 
-output_path = 'src/data/decks.json'
+output_path_decks = 'src/data/decks.json'
+output_path_user = 'src/data/user.json'
 
 sort_classes = {
   "creature": "sorted-by-creature clearfix element",
@@ -59,16 +60,19 @@ for result in results:
   if '_' in deck['name']:
     if deck['name'] in duplicates.keys():
       newstr = deck['name'] + str(duplicates[deck['name']] + 1)
+      deck['code'] = "".join([deck['name'][:3], str(duplicates[deck['name']] + 1)])  
       return_decks[newstr] = deck
       duplicates[deck['name']] = duplicates[deck['name']] + 1
       return_decks[newstr]['name'] = return_decks[newstr]['name'] + str(duplicates[deck['name']])
     else:
       duplicates[deck['name']] = 1
+      deck['code'] = "".join([deck['name'][:3], "1"])  
       return_decks[deck['name'] + "1"] = deck
       return_decks[deck['name'] + "1"]['name'] = deck['name'] + "1"
-      
   else:
+    deck['code'] = deck['name'][:4]
     return_decks[deck['name']] = deck
+    
   
   #print("- - - - - - - - - - - - - - - - - - - - - - - - -")
 for key, value in return_decks.items(): 
@@ -81,7 +85,14 @@ for key, value in return_decks.items():
       deck_colors.append(color)
   return_decks[key]['color'] = deck_colors
 
-with open(output_path, 'w') as outfile:
+with open(output_path_decks, 'w') as outfile:
   json.dump(return_decks, outfile)
 print(duplicates)
-print("Exported decks to {}".format(output_path))
+print("Exported decks to {}".format(output_path_decks))
+
+user_decks = {}
+for key in return_decks.keys():
+  user_decks[key] = False
+with open(output_path_user, 'w') as outfile:
+  json.dump(user_decks, outfile, indent=2)
+print("Exported user to {}".format(output_path_user))

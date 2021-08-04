@@ -47,9 +47,14 @@ export default function DeckContainer(props) {
   const { data } = props
   const [{ searchResults }, ] = useStateStore();
   const [isOpen, setIsOpen] = useState(false);
+
+  let isVisible = true;
+  if (props.visible === false || searchResults.indexOf(props.id) < 0){
+    isVisible = false;
+  }
   
   return (
-    <Card className={classes.card} style={searchResults.indexOf(props.id) > -1 ? {} : {display: 'none'}}>
+    <Card className={classes.card} style={isVisible ? {} : {display: 'none'}}>
       
         <div 
           className={classes.headingContainer} 

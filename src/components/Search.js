@@ -5,7 +5,7 @@ import InputBase from '@material-ui/core/InputBase';
 //import { useStateStore } from "../store/store.js";
 
 
-const timeoutDuration = 1000;
+const timeoutDuration = 500;
 
 const useStyles = makeStyles(theme => ({
   inputRoot: {
