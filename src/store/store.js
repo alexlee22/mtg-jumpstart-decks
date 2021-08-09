@@ -11,7 +11,7 @@ const searchDict = Object.keys(JumpstartDecks).reduce((recDict, key) => {
 }, {})
 const defaultSearchResults = Object.keys(JumpstartDecks)
 
-const USER_LIB = JumpstartDecks
+//const USER_LIB = JumpstartDecks
 
 export const initialState = {
   popup: true,
@@ -20,6 +20,8 @@ export const initialState = {
   searchDictonary: searchDict,
   searchResults: defaultSearchResults,
   userDeckFilter: false,
+  favorite: [],
+  filter: 'library',
 };
 
 export const StateContext = createContext();
@@ -32,6 +34,8 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "setFilter":
+      return { ...state, filter: action.payload }
     case "setPopup":
       return { ...state, popup: action.payload }
     case "setSearchResults":
@@ -40,6 +44,13 @@ export const reducer = (state, action) => {
       return { ...state, searchResults: defaultSearchResults }
     case "setUserDeckFilter":
       return { ...state, userDeckFilter: !state.userDeckFilter }
+    case "setDeckFavorite":
+      console.log(state.favorite.indexOf(action.payload) > -1 )
+      let newFavs = state.favorite.indexOf(action.payload) > -1 
+        ? state.favorite.filter(deck => deck !== action.payload)
+        : [...state.favorite, action.payload]
+      console.log(newFavs)
+      return { ...state, favorite: newFavs}
     default:
       return state;
   }

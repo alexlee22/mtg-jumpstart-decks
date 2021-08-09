@@ -4,12 +4,13 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import Header from './components/Header.js';
 import Popup from './components/Popup.js';
 import Content from './components/Content.js';
-
+import Navigation from './components/Navigation.js';
+import purple from '@material-ui/core/colors/purple';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#ffc629',
+      main: purple[500],
     },
     secondary: {
       main: '#000000'
@@ -25,6 +26,7 @@ function App() {
           <Header />
           <Content />
           <Popup />
+          <Navigation />
         </div>
       </MuiThemeProvider>
     </StateProvider>

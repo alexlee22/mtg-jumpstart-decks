@@ -13,15 +13,19 @@ const useStyles = makeStyles(theme => ({
 export default function Content() {
   //const classes = useStyles();
   //const [{ rawDecks }, dispatch] = useStateStore();
-  const [{ rawDecks, userDeckFilter, userLibrary }, ] = useStateStore();
-  /*
-  function handlePopup(value){
-    dispatch({
-      type: "setPopup",
-      payload: value
-    });
+  const [{ filter, rawDecks, favorite, userLibrary }, ] = useStateStore();
+  
+  function checkDeckVisiblity(deck) {
+    if (filter === 'favorite' && favorite.indexOf(deck) < 0) {
+      // favourate
+      return false;
+    } else if (filter === 'collection' && userLibrary.indexOf(deck) < 0) {
+      // user
+      return false;
+    } else {
+      return true;
+    }
   }
-  */
   
   return (
     <div>
@@ -32,10 +36,11 @@ export default function Content() {
             key={deck} 
             id={deck} 
             data={rawDecks[deck]}
-            visible={userDeckFilter ? userLibrary.indexOf(deck) > -1 : true}
+            visible={checkDeckVisiblity(deck)}
           />
         )}
       </div>
+      <div className="MuiBottomNavigation-root"></div>
     </div>
   );
 
