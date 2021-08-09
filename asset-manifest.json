@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mtg-jumpstart-decks/static/css/main.69eda509.chunk.css",
-    "main.js": "/mtg-jumpstart-decks/static/js/main.9a506888.chunk.js",
-    "main.js.map": "/mtg-jumpstart-decks/static/js/main.9a506888.chunk.js.map",
+    "main.css": "/mtg-jumpstart-decks/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/mtg-jumpstart-decks/static/js/main.c22c531e.chunk.js",
+    "main.js.map": "/mtg-jumpstart-decks/static/js/main.c22c531e.chunk.js.map",
     "runtime-main.js": "/mtg-jumpstart-decks/static/js/runtime-main.b2adc788.js",
     "runtime-main.js.map": "/mtg-jumpstart-decks/static/js/runtime-main.b2adc788.js.map",
-    "static/js/2.339037e9.chunk.js": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js",
-    "static/js/2.339037e9.chunk.js.map": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js.map",
+    "static/js/2.ab53b7b7.chunk.js": "/mtg-jumpstart-decks/static/js/2.ab53b7b7.chunk.js",
+    "static/js/2.ab53b7b7.chunk.js.map": "/mtg-jumpstart-decks/static/js/2.ab53b7b7.chunk.js.map",
     "index.html": "/mtg-jumpstart-decks/index.html",
-    "precache-manifest.6f3cbb8ac50c6658ddf1b8dfc110ef26.js": "/mtg-jumpstart-decks/precache-manifest.6f3cbb8ac50c6658ddf1b8dfc110ef26.js",
+    "precache-manifest.b6fa6b4cd85ea0a0d8bf342399918802.js": "/mtg-jumpstart-decks/precache-manifest.b6fa6b4cd85ea0a0d8bf342399918802.js",
     "service-worker.js": "/mtg-jumpstart-decks/service-worker.js",
-    "static/css/main.69eda509.chunk.css.map": "/mtg-jumpstart-decks/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.339037e9.chunk.js.LICENSE.txt": "/mtg-jumpstart-decks/static/js/2.339037e9.chunk.js.LICENSE.txt"
+    "static/css/main.5ecd60fb.chunk.css.map": "/mtg-jumpstart-decks/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.ab53b7b7.chunk.js.LICENSE.txt": "/mtg-jumpstart-decks/static/js/2.ab53b7b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b2adc788.js",
-    "static/js/2.339037e9.chunk.js",
-    "static/css/main.69eda509.chunk.css",
-    "static/js/main.9a506888.chunk.js"
+    "static/js/2.ab53b7b7.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.c22c531e.chunk.js"
   ]
 }
