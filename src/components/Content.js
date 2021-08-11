@@ -2,6 +2,7 @@ import React from 'react';
 import { useStateStore } from "../store/store.js";
 //import { makeStyles } from '@material-ui/core/styles';
 import DeckContainer from './Deck/DeckContainer.js';
+import ActionBar from './Deck/ActionBar.js';
 /*
 const useStyles = makeStyles(theme => ({
   title: {
@@ -30,6 +31,7 @@ export default function Content() {
   return (
     <div>
       <div className="MuiToolbar-regular"></div>
+      <ActionBar />
       <div>
         { Object.keys(rawDecks).map(deck =>
           <DeckContainer 

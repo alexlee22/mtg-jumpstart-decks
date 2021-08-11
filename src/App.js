@@ -1,13 +1,15 @@
 import React from 'react';
 import { StateProvider, initialState, reducer } from "./store/store.js";
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { createTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import Header from './components/Header.js';
-import Popup from './components/Popup.js';
+//import Popup from './components/Popup.js';
 import Content from './components/Content.js';
 import Navigation from './components/Navigation.js';
 import purple from '@material-ui/core/colors/purple';
+import ModalWrapper from './components/ModalWrapper.js';
+import Modal from './components/Modal';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: purple[500],
@@ -25,8 +27,10 @@ function App() {
         <div className="App">
           <Header />
           <Content />
-          <Popup />
           <Navigation />
+          <ModalWrapper>
+            <Modal />
+          </ModalWrapper>
         </div>
       </MuiThemeProvider>
     </StateProvider>
@@ -34,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+//<Popup />
+          

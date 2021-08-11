@@ -8,7 +8,6 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -44,25 +43,27 @@ export default function Header() {
   const classes = useStyles();
   const [, dispatch] = useStateStore();
 
-  function handleToggleMenu(){
-    /*
-    dispatch({
-      type: "setMenu",
-      payload: ''
-    });
-    */
-  }
   function handleUserDeck(){
     dispatch({
-      type: "setUserDeckFilter",
+      type: "setPopup",
+      payload: {
+        popup: false,
+        type: ''
+      }
     });
   }
 
   return (
     <AppBar position="fixed" >
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { handleToggleMenu() }}>
-          <MenuIcon onClick={() => handleUserDeck()} />
+        <IconButton
+          edge="start" 
+          className={classes.menuButton} 
+          color="inherit" 
+          aria-label="menu" 
+          onClick={() => handleUserDeck()} 
+        >
+          <MenuIcon />
         </IconButton>
         <div className={classes.search}>
           <div className={classes.iconWrapper}>
