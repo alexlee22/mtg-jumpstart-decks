@@ -11,6 +11,9 @@ const useStyles = makeStyles(theme => ({
     margin: '1.5rem',
     padding: '1rem',
   },
+  cardHeader: {
+    marginBottom: '1rem'
+  },
   titlebar: {
     display: 'flex',
     flexWrap: 'noWrap',
@@ -43,18 +46,21 @@ export default function CardDetails({ title, subtitle, children }) {
 
   return (
     <Paper className={classes.root}>
-      <span className={classes.titlebar}>
-        <Typography variant="h5" component="h5" className={classes.title}>
-          { title }
-        </Typography>
-        <CloseIcon
-          className={classes.closeIcon}
-          onClick={() => closePopup()}
-        />
-      </span>
-      <div>
-        { subtitle }
+      <div className={classes.cardHeader}>
+        <span className={classes.titlebar}>
+          <Typography variant="h5" component="h5" className={classes.title}>
+            { title }
+          </Typography>
+          <CloseIcon
+            className={classes.closeIcon}
+            onClick={() => closePopup()}
+          />
+        </span>
+        <div>
+          { subtitle }
+        </div>
       </div>
+      
       {children}
     </Paper>
   );

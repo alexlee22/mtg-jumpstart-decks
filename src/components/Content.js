@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStateStore } from "../store/store.js";
 //import { makeStyles } from '@material-ui/core/styles';
+import { useLocation } from "react-router-dom";
 import DeckContainer from './Deck/DeckContainer.js';
 import ActionBar from './Deck/ActionBar.js';
 /*
@@ -11,11 +12,28 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 */
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 export default function Content() {
-  //const classes = useStyles();
-  //const [{ rawDecks }, dispatch] = useStateStore();
-  const [{ filter, rawDecks, favorite, userLibrary }, ] = useStateStore();
-  
+  const [{ filter, rawDecks, favorite, userLibrary }, dispatch ] = useStateStore();
+  const query = useQuery()
+
+  useEffect(() => {
+    let queryDecks = query.get("decks");
+    if (queryDecks){
+      queryDecks = queryDecks.split('|');
+      let userKeyDecks = Object.keys(rawDecks).filter(c => queryDecks.includes(rawDecks[c].code));
+      dispatch({
+        type: "setUserLibrary",
+        payload: userKeyDecks
+      });
+    } else {
+      console.log('no decks found');
+    }
+  }, []);
+
   function checkDeckVisiblity(deck) {
     if (filter === 'favorite' && favorite.indexOf(deck) < 0) {
       // favourate
