@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useStateStore } from "../store/store.js";
 import { makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
-//import { useStateStore } from "../store/store.js";
-
 
 const timeoutDuration = 500;
 

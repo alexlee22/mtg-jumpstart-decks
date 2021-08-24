@@ -1,5 +1,4 @@
 import React from 'react';
-//import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const card_classes = [
@@ -12,23 +11,8 @@ const card_classes = [
   "land",
   "other",
 ]
-/*
-const useStyles = makeStyles(theme => ({
-  title: {
-    marginBottom: '15px',
-    textAlign: 'center',
-    color: 'white'
-  },
-  card: {
-    margin: '20px'
-  },
-  heading: {
-    textTransform: 'capitalize'
-  }
-}));
-*/
+
 export default function DeckContents(props) {
-  //const classes = useStyles();
   const { deck } = props
   return (
     <>

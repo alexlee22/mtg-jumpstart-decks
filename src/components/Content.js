@@ -1,17 +1,9 @@
 import React, { useEffect } from 'react';
 import { useStateStore } from "../store/store.js";
-//import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from "react-router-dom";
 import DeckContainer from './Deck/DeckContainer.js';
 import ActionBar from './Deck/ActionBar.js';
-/*
-const useStyles = makeStyles(theme => ({
-  title: {
-    marginBottom: '15px',
-    textAlign: 'center'
-  },
-}));
-*/
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
